@@ -2360,7 +2360,7 @@ img {
 }
 
 .input-field {
-  color: gray;
+  color: rgb(255, 255, 255);
   background-color: #373737;
   border: 0 solid #000;
   border-radius: 4px;
@@ -2430,7 +2430,7 @@ img {
 }
 
 .title.margin-1 {
-  margin-top: 60px;
+  margin-top: 80px;
   margin-bottom: 60px;
 }
 
@@ -2467,7 +2467,7 @@ img {
 
 .book-img {
   width: 100%;
-  height: auto;
+  height: 32vh;
 }
 
 .book-img._2 {
@@ -2494,6 +2494,8 @@ img {
   transition: all 0.1s;
   display: flex;
   position: relative;
+  flex-grow: 1;
+  width: 50%;
 }
 
 .book-wrapper-2:hover {
@@ -2646,7 +2648,27 @@ img {
   line-height: 20px;
 }
 
+/* Limit .title to one line */
+.title.margin-2 {
+  display: -webkit-box; /* Use a flex container */
+  -webkit-line-clamp: 1; /* Limit to 1 lines */
+  -webkit-box-orient: vertical; /* Set the box orientation */
+  overflow: hidden; /* Hide overflow text */
+}
+
+/* Limit .info-para to six lines */
+.info-para {
+  display: -webkit-box; /* Use a flex container */
+  -webkit-line-clamp: 6; /* Limit to 6 lines */
+  -webkit-box-orient: vertical; /* Set the box orientation */
+  overflow: hidden; /* Hide overflow text */
+}
+
 @media screen and (min-width: 1280px) {
+  .book-img {
+    height: 40vh;
+  }
+
   .book-img._2 {
     width: 200px;
     height: 300px;
@@ -2723,6 +2745,10 @@ img {
 
   ._3-books-wrapper {
     flex-flow: column;
+  }
+
+  .book-wrapper-2 {
+    width: 100%;
   }
 
   .book-wrapper-2.third {
