@@ -2711,6 +2711,12 @@ img {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .book-wrapper-2 {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .navbar {
     padding-left: 2vw;
@@ -2745,10 +2751,6 @@ img {
 
   ._3-books-wrapper {
     flex-flow: column;
-  }
-
-  .book-wrapper-2 {
-    width: 100%;
   }
 
   .book-wrapper-2.third {
